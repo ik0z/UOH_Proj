@@ -1,0 +1,171 @@
+
+**** 02/12/20 11:01:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-3\Experiment-3.2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Feb 12 11:01:30 2020
+
+
+
+** Analysis setup **
+.tran 20us 1000us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment-3.2.net"
+
+**** INCLUDING Experiment-3.2.net ****
+* Schematics Netlist *
+
+
+
+D_D1         $N_0001 $N_0002 D1N4002 
+V_V1         $N_0001 0 DC 0V AC 5V 5K
+R_R1         0 $N_0002  1k  
+
+**** RESUMING Experiment-3.2.cir ****
+.INC "Experiment-3.2.als"
+
+
+
+**** INCLUDING Experiment-3.2.als ****
+* Schematics Aliases *
+
+.ALIASES
+D_D1            D1(1=$N_0001 2=$N_0002 )
+V_V1            V1(+=$N_0001 -=0 )
+R_R1            R1(1=0 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING Experiment-3.2.cir ****
+.probe
+
+
+.END
+
+**** 02/12/20 11:01:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-3\Experiment-3.2.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4002         
+          IS   14.110000E-09 
+           N    1.984        
+         ISR  100.000000E-12 
+         IKF   94.81         
+          BV  100.1          
+         IBV   10            
+          RS     .03389      
+          TT    4.761000E-06 
+         CJO   51.170000E-12 
+          VJ     .3905       
+           M     .2762       
+
+
+**** 02/12/20 11:01:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-3\Experiment-3.2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)-30.71E-21                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         3.071E-23
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 02/12/20 11:01:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-3\Experiment-3.2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** DIODES
+
+
+NAME         D_D1      
+MODEL        D1N4002   
+ID           0.00E+00 
+VD           3.07E-20 
+REQ          3.61E+06 
+CAP          5.25E-11 
+**** 02/12/20 11:01:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-3\Experiment-3.2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)-30.71E-21                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         3.071E-23
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

@@ -1,0 +1,24 @@
+* D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-5\Experiment-5.2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Mar 22 08:40:24 2020
+
+
+
+** Analysis setup **
+.tran 20ns 3ms
+.OP 
+.STMLIB "Experiment-5.2.stl"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment-5.2.net"
+.INC "Experiment-5.2.als"
+
+
+.probe
+
+
+.END

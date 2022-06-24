@@ -1,0 +1,23 @@
+* D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Feb 05 10:12:31 2020
+
+
+
+** Analysis setup **
+.DC LIN V_VDD 0 0.8 0.01 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment-2.net"
+.INC "Experiment-2.als"
+
+
+.probe
+
+
+.END

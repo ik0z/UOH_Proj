@@ -1,0 +1,22 @@
+* D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-3\Experiment-3.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Feb 16 15:53:25 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment-3.net"
+.INC "Experiment-3.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,66 @@
+
+**** 03/22/20 08:40:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-5\Experiment-5.2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Mar 22 08:40:24 2020
+
+
+
+** Analysis setup **
+.tran 20ns 3ms
+.OP 
+.STMLIB "Experiment-5.2.stl"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment-5.2.net"
+
+**** INCLUDING Experiment-5.2.net ****
+* Schematics Netlist *
+
+
+
+D_D2         $N_0001 $N_0002 D1N4002 
+C_C1         $N_0003 $N_0001  10u  
+R_R1         $N_0001 $N_0002  10K  
+V_V1         $N_0003 $N_0002  
++SIN 0 10V 5kHz 0 0 0
+
+**** RESUMING Experiment-5.2.cir ****
+.INC "Experiment-5.2.als"
+
+
+
+**** INCLUDING Experiment-5.2.als ****
+* Schematics Aliases *
+
+.ALIASES
+D_D2            D2(1=$N_0001 2=$N_0002 )
+C_C1            C1(1=$N_0003 2=$N_0001 )
+R_R1            R1(1=$N_0001 2=$N_0002 )
+V_V1            V1(+=$N_0003 -=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING Experiment-5.2.cir ****
+.probe
+
+
+.END
+
+ERROR -- Node $N_0001 is floating
+ERROR -- Node $N_0002 is floating
+ERROR -- Node $N_0003 is floating

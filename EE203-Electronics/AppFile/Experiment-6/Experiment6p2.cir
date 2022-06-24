@@ -1,0 +1,23 @@
+* D:\University of Hail\2019-2020\Second\EE203 Electronic\Lab\ElectronicExp\app file\Experiment-6\Experiment6p2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Apr 06 18:54:49 2020
+
+
+
+** Analysis setup **
+.DC DEC I_IB 100u 1m 20 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment6p2.net"
+.INC "Experiment6p2.als"
+
+
+.probe
+
+
+.END
